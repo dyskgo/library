@@ -42,30 +42,6 @@
         </form>
         </div>
         </div>
-        <!-- Firebase Integration is not active right now. Will be in next update-->
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
-
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-            https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-firestore.js"></script>
-        <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-        apiKey: "AIzaSyBZXKQ7u2YyySoZYYoK9y9zpwNt4-Pftsg",
-        authDomain: "personal-book-library-25c75.firebaseapp.com",
-        databaseURL: "https://personal-book-library-25c75.firebaseio.com",
-        projectId: "personal-book-library-25c75",
-        storageBucket: "personal-book-library-25c75.appspot.com",
-        messagingSenderId: "528023206102",
-        appId: "1:528023206102:web:ecdd2dadc95ad7aac87177"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        // Reference to Storage
-        var db = firebase.firestore();
-        db.settings( { timestampsInSnapshots: true }); 
-        </script>
         <script src="script.js"></script>
     </body>
 </html>
