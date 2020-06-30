@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet"> 
+        <title>Library</title>
+        <link rel="stylesheet" type="text/css" href="/styles.css">
+    </head>
+    <body>
+    <div class="body">
+        <div class="header">
+            <h1 id="top-heading">Personal Book Library</h1>
+        </div>
+        <button id="add-book">Add New Book</button>
+        <div id="library"> 
+            <div id="library-heading">
+                <div>Book Title</div>
+                <div>Author</div>
+                <div>Pages</div>
+                <div>Read</div>
+                <div>Delete</div>
+            </div>
+            <div id="library-chart">
+            </div>  
+        </div> 
+        <div id="overlay">
+        <form id="book-form" action="" method="post">
+            <h1>Add a Book</h1>
+            <label for="book-name">Book Name</label>
+            <input type="text" id="book-name" name="book-name" required>
+            <label for="author-name">Author</label>
+            <input type="text" id="author-name" name="author-name" required>
+            <label for="pages">Pages</label>
+            <input type="number" id="pages" name="pages" required>
+            <div id="buttons">
+                <input type="submit" value="Submit" id="submit">
+                <button id="cancel">Cancel</button>
+            </div> 
+        </form>
+        </div>
+        </div>
+        <!-- Firebase Integration is not active right now. Will be in next update-->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-firestore.js"></script>
+        <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+        apiKey: "AIzaSyBZXKQ7u2YyySoZYYoK9y9zpwNt4-Pftsg",
+        authDomain: "personal-book-library-25c75.firebaseapp.com",
+        databaseURL: "https://personal-book-library-25c75.firebaseio.com",
+        projectId: "personal-book-library-25c75",
+        storageBucket: "personal-book-library-25c75.appspot.com",
+        messagingSenderId: "528023206102",
+        appId: "1:528023206102:web:ecdd2dadc95ad7aac87177"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        // Reference to Storage
+        var db = firebase.firestore();
+        db.settings( { timestampsInSnapshots: true }); 
+        </script>
+        <script src="/script.js"></script>
+    </body>
+</html>
